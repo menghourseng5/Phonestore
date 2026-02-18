@@ -12,6 +12,28 @@
     />
   </head>
   <body>
+    <!--Cart sidebar start-->
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="cartSidebar"
+      aria-labelledby="cartSidebarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartSidebarLabel">Cart Items</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <p class="text-center opcity-75">Cart is empty</p>
+      </div>
+    </div>
+    <!--Cart sidebar end-->
     <!-- Navbar start-->
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <div class="container-fluid">
@@ -71,11 +93,124 @@
               Search
             </button>
           </form>
-          <i class="bi bi-bag text-light me-4"></i>
+          <i
+            data-bs-toggle="offcanvas"
+            href="#cartSidebar"
+            role="button"
+            aria-controls="cartSidebar"
+            class="bi bi-bag text-light me-4"
+          ></i>
         </div>
       </div>
     </nav>
     <!-- Navbar end -->
+
+    <!-- Content start-->
+    <div class="container mt-4">
+      <!--Carousel start-->
+      <div
+        id="carouselExampleDark"
+        class="carousel carousel-dark slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img
+              style="height: 500px"
+              src="Watch7.png"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              style="height: 500px"
+              src="BG-IPHONE.png"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              style="height: 500px"
+              src="laptop.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+      <!--Carousel end-->
+    </div>
+
+    <!-- Content end-->
+
+    <!-- Category Content start -->
+
+    <div class="category-content container mt-4">
+      <div class="row p-0 m-0">
+        <div class="col-lg-6">
+          <div class="row p-0 m-0">
+            <div class="col-12 category-data mb-2">
+              <div class="card">
+                <img src="laptop.jpg" alt="" srcset="" />
+              </div>
+            </div>
+
+            <div class="col-12 category-data">
+              <div class="card">
+                <img src="laptop.jpg" alt="" srcset="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 category-data">
+          <div class="card">
+            <img class="card-img-right" src="laptop.jpg" alt="" srcset="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Category Content end -->
   </body>
   <script src="bootstrap/bootstrap.bundle.min.js"></script>
 </html>

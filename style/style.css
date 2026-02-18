@@ -6,3 +6,11 @@
   font-size: 26px;
   cursor: pointer;
 }
+#cartSidebar {
+  width: 400px;
+}
+.category-data > .card > .card-img-right {
+  width: 800px;
+
+  object-fit: cover;
+}
